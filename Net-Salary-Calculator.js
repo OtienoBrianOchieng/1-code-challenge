@@ -1,7 +1,8 @@
+// Variables declarations
 const basicSalary = 80;
 const benefits = 100;
 const grossSalary = basicSalary + benefits ;
-
+// Deducting NHIF from the gross salary
 const netSalary = function () {
     const afterNhifDeductions = function () {
         if (grossSalary >= 0 && grossSalary <= 5,999) { return (grossSalary - 150);}
@@ -22,6 +23,7 @@ const netSalary = function () {
         else if (grossSalary >= 90000 && grossSalary <= 99,999) {return (grossSalary - 1600);}
         else if (grossSalary >= 100000) {return (grossSalary - 1700);}
     }
+// Calculating Payee deductions
     const payeeDeductions= function () {
             if (grossSalary >=1 && grossSalary <= 24000) { return grossSalary * 0.1} 
             else if (grossSalary >= 24001 && grossSalary >= 32333) { return grossSalary * 0.25}
@@ -29,11 +31,12 @@ const netSalary = function () {
             else if (grossSalary >= 500001 && grossSalary >= 800000) { return grossSalary * 0.325}
             else if (grossSalary > 800000) { return grossSalary * 0.35}
     }
-
+// Calculating NSSF deductions
     const nssfDeductions = function () {
         if (grossSalary >= 1 && grossSalary <= 6000){return grossSalary * 0.06}
         else if (grossSalary >= 6001){ return grossSalary*0.06}
     }
+// Returning the net income from above deductions
     return (afterNhifDeductions() - (payeeDeductions() + nssfDeductions()));
     
 }
