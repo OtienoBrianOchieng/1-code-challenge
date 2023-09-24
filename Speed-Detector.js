@@ -1,7 +1,7 @@
 const speedOfCar = 70;
 
 function speedDetector () {
-    if (speedOfCar === 70) {console.log ("OK"); return "OK";} 
+    if (speedOfCar <= 70) {console.log ("OK"); return "OK";} 
     else if (speedOfCar === 75) {console.log ("Points: 1"); return "points: 1";}
     else if (speedOfCar === 80) {console.log ("Points: 2"); return "points: 2";}
     else if (speedOfCar === 85) {console.log ("Points: 3"); return "points: 3";}
